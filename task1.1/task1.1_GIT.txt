@@ -1,0 +1,17 @@
+PS D:\Mega\Epam course\HW GIT\m1> git reflog
+05cd746 (HEAD -> master, origin/master) HEAD@{0}: commit: main folder changed
+4dfa097 HEAD@{1}: commit: git info modified
+05e098f (origin/develop, develop) HEAD@{2}: merge develop: Fast-forward
+69c6251 HEAD@{3}: checkout: moving from develop to master
+05e098f (origin/develop, develop) HEAD@{4}: merge images: Merge made by the 'recursive' stra
+tegy.
+dfdf736 (origin/styles, styles) HEAD@{5}: checkout: moving from develop to develop
+dfdf736 (origin/styles, styles) HEAD@{6}: commit: styles added
+ed13510 HEAD@{7}: checkout: moving from images to develop
+63dd464 (origin/images, images) HEAD@{8}: commit: images added to folder
+ba324a7 HEAD@{9}: commit: images added
+ed13510 HEAD@{10}: checkout: moving from develop to images
+ed13510 HEAD@{11}: commit: index.html added
+69c6251 HEAD@{12}: checkout: moving from master to develop
+69c6251 HEAD@{13}: commit (initial): readme.txt added
+PS D:\Mega\Epam course\HW GIT\m1> git status
