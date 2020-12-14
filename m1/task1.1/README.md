@@ -1,6 +1,6 @@
 Nice to meet you here
 
-This is a random picture from my download folder
+<p style="color:red;">This is a random picture from my download folder</p>
 
 ![Screenshot_1](https://user-images.githubusercontent.com/75696130/101888395-bf98bc80-3ba6-11eb-9f9a-2abf29323fd6.png)
 
