@@ -36,3 +36,5 @@ I have also used VLANs here and computers from different VLANs are not able to c
 
 
 ![task4 2_завдання3c](https://user-images.githubusercontent.com/75696130/103302837-3fc77a80-4a0d-11eb-884d-c360b849aab9.png)
+
+Cisco Packet tracer`s files are located within the same folder as the README.md file

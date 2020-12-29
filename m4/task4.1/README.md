@@ -24,3 +24,5 @@ I have added all the tasks in the Cisco packet tracer format below it this folde
 
 ![Screenshot_7](https://user-images.githubusercontent.com/75696130/103301437-1c4f0080-4a0a-11eb-90d4-06e56ca48aec.png)
 ![Screenshot_8_router](https://user-images.githubusercontent.com/75696130/103301446-207b1e00-4a0a-11eb-9109-04d6ba533be9.png)
+
+Cisco Packet tracer`s files are located within the same folder as the README.md file
