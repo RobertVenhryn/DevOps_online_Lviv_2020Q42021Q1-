@@ -1,0 +1,58 @@
+Task1.Part1 
+Password was changed, root has been chosen
+скрін1
+The information about passwords are located in /etc/shadow file
+скрін2
+user monitoring by sysdig -c spy_users command
+скрін3
+information about my account was changed
+скрін4
+command man finger less
+скрін 5
+there are 2 keys: -l and -s. The difference is that -l includes all information from the previous key and gives us more e.g. phone number, e-mail, room number.
+скрін 6
+as I understood .bash_profile is using when the user login and .bashrc when the user uses a shell
+скрін 7
+
+the first Linux lab
+1)I'm using Oracle VM VirtualBox
+2)Ubuntu 20.04 server (lsb_release -a)
+3)SSH client was MobaXterm mostly and Bitvise SSH Client a couple of times
+4)I've studied the new commands like tree, cp -vi, finger, ln -s, ln, ls -al /etc | less > /dev/pts/0, lsdev, lsscsi, hwinfo --short, head -n* and so on. And also different keys
+5)And I read the information (with man command, --help) about many commands from this lab
+
+ls command in home directory
+скрін 8
+"f" and "b" bottoms are very useful while using less command
+
+
+Task1.Part2 
+скрін 9, 10, 11
+We can go back to our home directory with the cd command
+-l key means long listing format
+-a key means all (--all)
+скрін 12
+soft link takes 27 bits while hard link - the same amount as the file (also has the same inode number)
+скрін 13
+the data in link files will be the same as original file has
+hard link works unlike symbolic link (after deleting original file)
+скрін 14, 15 - 18
+I'm not sure is it correct, but I took the information from, /etc, and put it to /root/redirection.txt
+скрін 19
+we can find out what there is in our system using these commands:
+df -h
+lsusb (to get info about USB's)
+lsdev | less (information on all of the installed devices)
+lsscsi (devices that connected to your computer)
+dmidecode | less (about connected hardware as well)
+скрін 20-21
+we can use ls -al command and see the first column (from the lecture)
+- - regular file;
+d - directory;
+b - block device;
+c - character device;
+l - symbolic link;
+p - pipe (pipe, fifo);
+s - socket.
+
+
