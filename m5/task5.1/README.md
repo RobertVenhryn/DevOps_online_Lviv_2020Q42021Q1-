@@ -29,9 +29,13 @@ as I understood .bash_profile is using when the user login and .bashrc when the 
 
 the first Linux lab
 1)I'm using Oracle VM VirtualBox
+
 2)Ubuntu 20.04 server (lsb_release -a)
+
 3)SSH client was MobaXterm mostly and Bitvise SSH Client a couple of times
+
 4)I've studied the new commands like tree, cp -vi, finger, ln -s, ln, ls -al /etc | less > /dev/pts/0, lsdev, lsscsi, hwinfo --short, head -n* and so on. And also different keys
+
 5)And I read the information (with man command, --help) about many commands from this lab.
 
 ls command in home directory
@@ -47,7 +51,9 @@ Task1.Part2
 ![Screenshot_11](https://user-images.githubusercontent.com/75696130/104845097-565e4480-58dc-11eb-9f81-202b7be022bf.png)
 
 We can go back to our home directory with the cd command
+
 -l key means long listing format
+
 -a key means all (--all)
 
 ![Screenshot_12](https://user-images.githubusercontent.com/75696130/104845103-5fe7ac80-58dc-11eb-8dcf-4e6ed5b5b7f8.png)
@@ -71,21 +77,32 @@ I'm not sure is it correct, but I took the information from, /etc, and put it to
 
 we can find out what there is in our system using these commands:
 df -h
+
 lsusb (to get info about USB's)
+
 lsdev | less (information on all of the installed devices)
+
 lsscsi (devices that connected to your computer)
+
 dmidecode | less (about connected hardware as well)
 
 ![Screenshot_20](https://user-images.githubusercontent.com/75696130/104845156-96252c00-58dc-11eb-9b77-769aa1d9206e.png)
 ![Screenshot_21](https://user-images.githubusercontent.com/75696130/104845174-af2ddd00-58dc-11eb-9249-11ee55ef6574.png)
 
 we can use ls -al command and see the first column (from the lecture)
+
 - - regular file;
+
 d - directory;
+
 b - block device;
+
 c - character device;
+
 l - symbolic link;
+
 p - pipe (pipe, fifo);
+
 s - socket.
 
 ![Screenshot_22](https://user-images.githubusercontent.com/75696130/104845182-b81eae80-58dc-11eb-93b0-b4f270f91962.png)
