@@ -1,0 +1,63 @@
+1)There are several fields in passwd file (username, password, UID, GID, GEOS, home directory, login shell) and in the group file (group name, password, GID, group list). We have common users and pseudo-users (which can be defined by their default shell, like /bin/false, /sbin/nologin. pseudo-users: bin, sys, man, deamon, adm, sshd, nobody users) user id is also important: 1-999 are daemons, pseudo-users, system and reserved users. >1000 - regular users
+скрін 1
+
+2)UID is the special identifier of a user. we can see it in the third place after password "x". UID range is a sequence of ids that are given by the system to users, pseudo-users, and so on. 0-root, 1-999 deamons, pseudo-users, system (from the lecture). we hawe to type cut -d: -f1,3 /etc/passwd and we will see UID
+скрін 2
+
+3)GID is the special identifier of a group. we can see it in the third place after password "x" if we open /etc/group file. GID is a sequence of id`s that are given by the system. we can. Useful commands are id -g (which gives you GID of current user), more /etc/group...
+скрін3
+
+4)We can do it using /etc/group file. Different users can belong to the same group or they can be in different.
+
+5)As fur as I'm concerned there are 2 the most popular commands: adduser and useradd. I mostly use adduser because I can set the password, user's home directory creates at once, the default shell is bash. 
+We have to define user`s name and password (also we can give additional information like phone number and "other" info)
+скрін 4,5
+
+6)We can change user's name by this command: usermod -l newlogin oldlogin. Also we can change UID by this: usermod -u [NEW_USER_ID] [USERNAME]
+скрін 6
+
+7)/etc/skel contains the default files for new users. It will be copied to the new user's home directory. 
+we can add /etc/skel/useradd file to change the default directory of a new user.
+скрін 7
+
+8)"userdel -r username" command
+
+9)the command "passwd -l user_name" to lock and "passwd -u username" to unlock the same with these commands "usermod -L user_name" "usermod -U username" But these commands will work just with login via username, and allow the user to log in via SSH keys.
+To disable acces by SSH we have to use "usermod -s /sbin/nologin username"
+
+10)We can do so with SSH key pair
+the first step is creating the key:
+ssh-keygen -t rsa -b 4096 -C "your_email@domain.com"
+to check it: 
+ls ~/.ssh/id_*
+now we have to send it to the remote host:
+ssh-copy-id remote_username@server_ip_address
+and now we can log in:
+ssh remote_username@server_ip_address
+скрін 8,9
+
+11)скрін 10
+
+12)Each file and folder has owner, group, others permission. You can read, write or execute a file. To change the permission we can use "chmod" command. Also there are special permission flags: - (no special permission), d (irectory), l (simbolic link), s (to tell the system run executable files with owner permission), t (Useful in shared enwironment. Only file owner can rename or delete the file). We can define permission with chmod +/-/= filename. + to add a permission, - to pick up, and = to owerrite a permission. There is also number form of permission types.
+
+14)To do so we user chown command. For changing group owner of a file or directory: "chgrp new_user_group filename". To change the user owner and group to root a.g. "sudo chown root:root agatha.txt"
+скрін11
+we can give a permission to execute files in the directory for users in group: "chmod g+s testdirectory -R". S means group users couldn't execute these files. We had to give them "chmod g+x" before that.
+скрін 12
+
+15)The default access rights can be set by umask command. We can prohibit access to the new files from "Others" in this way: umask 770
+Or give anybody only read permission to the new directories and full access by the owner: umask 33 (because 777-774=33)
+скрін 14
+
+16)Sticky bit is a protection mechanism of a folder. It concerns "Others" to avoid deleting files in the folder. There are two ways to add the sticky bit: chmod o+t /home/robert1/test
+another: chmod 1757 /home/robert1/test
+Here in 1757, 1 indicates Sticky Bit set, 7 for full permissions for owner, 5 for read and execute permissions for group, and full permissions for others. 
+скрін 15
+
+I'v found the command to locate files with sticky bits: "find . -perm -1000"
+скрін 16
+
+17)Command script has to be executable to be run: 
+"chmod ugo+x filename"
+
+
