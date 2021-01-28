@@ -1,0 +1,64 @@
+Part 1
+1)Running/Runnable (R), Sleeping (S/D), Stopped (T), Zombie (Z)
+
+2)to display a tree of processes we use pstree command. pstree -H PID to highlight certain process
+скрін1
+
+3)when we ask for some information from the kernel by typing top command, it gives us a snapshot of the system's current state. /proc is a mechanism that helps us to get underlying kernel data, it is an interface that provides interacting between user and kernel
+
+4)cat /proc/cpuinfo | less
+5)"ps -leF" and "ps aux"
+
+6)kernel processes have the process id (PID) = 2  (e.g. kthread)
+sudo ps --pid=2
+sudo ps --ppid=2
+All the rest - user processes (PID ≠ 2)
+sudo ps -N --pid=2
+sudo ps -N --ppid=2
+
+7)Running/Runnable (R) means a process is using a CPU right now or has everything to be run (Runnable). Sleeping (S/D) - the process is just waiting for a.g. I/O operation, event. It becomes Stopped (T) after receiving SIGSTOP signal. Zombie (Z) - when a process finishes, but parent process isn't programmed properly and newer calls wait(). We can see zombie processes using top command.
+From the interruptible sleep, a process can get a wake-up signal and become running and vice versa. From the running state, it can be stopped (SIGSTOP)/go to uninterruptible sleep/become a zombie.
+скрін 2
+
+8)скрін3,4
+9)скрі5
+
+10)It shows the amount of time: that the CPU spends, time lost due to running virtual machines, CPU idle time, and many things in the dashboard. The new for me from the process list is RES (amount of resident memory used by the process), SHR (Amount of shared memory used by the process), TIME+ (Total CPU time used by the task in hundredths of a second). This command gives us much more than mentioned above.
+скрін 6
+
+11)we have to press u and type the name
+скрін7
+
+12)we can type t to display CPU as a line. After pressing m letter - we will change the memory look. Or even  t and m simultaneously. Z letter to change color. We can sort by memory (M), CPU (P), PID (N), Time+ (T)
+
+13)screen 8,9
+
+14-15)there are two of them nice and renice. we can use nice command if we want to start the process with some priority and renice, when we need to change it. From the top command, we can do the same using r command.
+скрін 10,11
+
+16)we can send different signals to processes with the kill command. kill -15 PID used to ask a process to stop, kill -9 PID will stop the process immediately and we can lose data if the process was connected to another.
+screen 12
+
+17)bg - command to restart a process and force it to work in the background. to start a command in the background - bg sleep 500 & to move running the command in the background - bg jobnumber. To move it to the foreground - fg %1. The fg command has now brought the system back into a sleep state. Nohup command will send any output of running commands to the file nohup.out in the working directory or /home/userdir. nohup mycommand & will run the command in the background.
+screen 13,14,15
+
+Part2
+
+1)screen 16,17,18
+I can't connect from my VM to the host OS - Windows 10 via SSH
+
+2)I've created a pair of keys and put public key info into the file in another ubuntu server /home/robert/.ssh/authorized_key 
+And after typing ssh robert@192.168.0.113 it has been connected.
+screen 19,20
+3)screen 21
+
+4)I've made port forwarding on VirtualBox and my VM has a connection to the internet. But there is a strange result after typing traceroute 8.8.8.8
+screen 22
+
+5)screen 23
+I've chosen bbc.com to test. I typed "ping bbc.com" from another terminal and got this screen with information:  robert-VirtualBox > 151.101.0.81: ICMP echo request, id 5, seq 1, length 64. 
+screen 24
+This is telnet connection. I printed a command "ip a" from the terminal (telnet) and got these messages (screen below) 
+screen 25
+if we are using SSH - a boundless current of info appears (screen below)
+screen 26
