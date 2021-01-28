@@ -1,4 +1,5 @@
 Part 1
+
 1)Running/Runnable (R), Sleeping (S/D), Stopped (T), Zombie (Z)
 
 2)to display a tree of processes we use pstree command. pstree -H PID to highlight certain process
@@ -61,6 +62,7 @@ From the interruptible sleep, a process can get a wake-up signal and become runn
 ![Screenshot_15](https://user-images.githubusercontent.com/75696130/106194820-fe66ee00-61b7-11eb-9a45-5212696eac10.png)
 
 Part2
+
 1)
 ![Screenshot_16](https://user-images.githubusercontent.com/75696130/106194870-10489100-61b8-11eb-9a2e-801fbde955b5.png)
 ![Screenshot_17](https://user-images.githubusercontent.com/75696130/106194879-13dc1800-61b8-11eb-9479-73ed34accea0.png)
