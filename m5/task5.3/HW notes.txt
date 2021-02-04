@@ -61,4 +61,7 @@ screen 24
 This is telnet connection. I printed a command "ip a" from the terminal (telnet) and got these messages (screen below) 
 screen 25
 if we are using SSH - a boundless current of info appears (screen below)
-screen 26
+screen 26,27
+It shows us: the most used IP is V4 and TCP has 99.7% of the traffic
+screen 28
+
