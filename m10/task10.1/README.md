@@ -15,3 +15,9 @@ I've made my HW by the presentation and got a similar result. Please see the las
 ![Screenshot_8](https://user-images.githubusercontent.com/75696130/109342465-8fdb8580-7874-11eb-8a62-e44790169dda.png)
 
 ![Screenshot_9](https://user-images.githubusercontent.com/75696130/109342482-936f0c80-7874-11eb-8492-8a15ae15d4d4.png)
+
+
+I gave this HW the number 10.1 due to the requirements. But I didn't have a button "10.1" to send the file in MS Teams. So I sent it with number 9.2 in MS Teams (9.1 was Python).
+
+
+![Screenshot_10](https://user-images.githubusercontent.com/75696130/109343292-c960c080-7875-11eb-8eea-dc4fa5b3caa2.png)
