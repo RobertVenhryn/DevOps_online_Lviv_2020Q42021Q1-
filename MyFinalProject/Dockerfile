@@ -1,6 +1,4 @@
 FROM ubuntu:20.04
-ENV PYTHONUNBUFFERED 1
-ENV PYTHONDONTWRITEBYTECODE 1
 ARG DEBIAN_FRONTEND=noninteractive
 RUN apt-get -y update && apt install python3 python3-pip -y
 RUN pip3 install --upgrade pip
